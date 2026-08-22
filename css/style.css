@@ -1,0 +1,140 @@
+/* gneral start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+span,
+a {
+  display: inline-block;
+}
+
+/* genral end */
+body {
+ font-family: "Chakra Petch", sans-serif;
+ font-family: "Days One", sans-serif;
+}
+h1,h2,h3,h4,h5{
+ font-family: "Days One", sans-serif;
+}
+a,p,label,button{
+ font-family: "Chakra Petch", sans-serif;
+}
+:root {
+  --dark-color: #0b0e13;
+  --main-color: #CBFE1C;
+  --white-color: #f1f1f1;
+}
+.main-color{
+    color: var(--main-color);
+}
+.main-bg-color{
+    background-color: var(--main-color);
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--dark-color);
+  --bs-navbar-color: var(--white-color);
+  --bs-navbar-hover-color: var(--main-color);
+  --bs-navbar-brand-color: var(--main-color);
+  --bs-navbar-brand-hover-color: var(--main-color);
+  --bs-navbar-active-color: var(--main-color);
+}
+
+.navbar-toggler:hover span {
+  color: var(--main-color);
+}
+.nf-nav {
+  color: white;
+}
+.sp1:hover {
+  color: var(--main-color);
+}
+.sp2:hover {
+  color: var(--main-color);
+}
+
+.btnn.btn {
+  background-color: var(--main-color);
+}
+.btnn.btn:hover {
+  background-color: var(--main-color);
+  color: #0b0e13;
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn-shine:hover::before {
+  left: 120%;
+}
+/* End navbar */
+
+/* hero section */
+#hero-section{
+    background-image: linear-gradient( to left, rgb(0, 0, 0, .8) ,rgb(0, 0, 0,.8)), url(../images/hero-bg.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    .h1-fs{
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .btn1 {
+        color: var(--dark-color);
+        background-color: var(--main-color);
+        border: none;
+    }
+    .btn2{
+        background: transparent;
+        color: var(--main-color);
+        border: 2px solid var(--main-color);
+        transition: .3s;
+
+        &:hover{
+            background-color: var(--main-color);
+            color: var(--dark-color);
+        }
+    }
+    .inner-img{
+        height: 400px;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        border: 5px solid var(--main-color);
+    }
+    .icon-club{
+        color: var(--main-color);
+    }
+    .active-players{
+        width: 200px;
+        height: 100px;
+        background-color: var(--dark-color);
+    }
+}
+
+/* End hero section */
