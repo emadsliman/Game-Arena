@@ -38,6 +38,10 @@ button {
   --dark-color: #0b0e13;
   --main-color: #cbfe1c;
   --white-color: #f1f1f1;
+  --dark-gray:#1A1A1A;
+}
+.dark-bg-gray{
+background-color: var(--dark-gray);    
 }
 .main-color {
   color: var(--main-color);
@@ -147,26 +151,36 @@ button {
 }
 /* End hero section */
 
-/* our game */
-#our-game {
-  background-color: var(--dark-color);
-  .our-a-b {
+/* General characteristics */
+  .line-bf-af {
     color: var(--main-color);
   }
-  .our-a-b::before,
-  .our-a-b::after {
+  .line-bf-af::before,
+  .line-bf-af::after {
     content: "";
     height: 3px;
     width: 80px;
     background-color: var(--main-color);
   }
-  .our-a-b::before {
-    background: linear-gradient(to right, transparent, var(--main-color));
+  .line-bf-af::before {
+    background: linear-gradient(to right , transparent, var(--main-color));
   }
-  .our-a-b::after {
+  .line-bf-af::after {
     background: linear-gradient(to left, transparent, var(--main-color));
   }
 
+  .h2-fs{
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .spn-color{
+    color: var(--main-color);
+  }
+/* End General characteristics */
+
+/* our game */
+#our-game {
+  background-color: var(--dark-color);
   .item {
     border-radius: 50px;
     overflow: hidden;
@@ -266,3 +280,73 @@ button {
   }
 }
 /* end our game */
+/* what we do */
+#what-we-do{
+    background-color: var(--dark-color);
+    .icon-wh-do{
+        width: 80px;
+        height: 80px;
+        background-color: oklch(27.8% .033 256.848);
+        font-size: 25px;
+        color: var(--main-color);
+        transition: .4s;
+       
+    }
+    .inner-wh-do{
+        height: 300px;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .hov-itm{
+        &:hover{
+            border: 2px solid var(--main-color);
+
+        }
+        &:hover .icon-wh-do{
+            background-color: var(--main-color);
+            color: oklch(27.8% .033 256.848);
+        }
+        &:hover .triangle-right{
+            top: 20px;
+            left: 20px;
+            opacity: 1;
+        }
+         &:hover .triangle-left{
+            right: 20px;
+            bottom: 20px;
+            opacity: 1;
+        }
+    }
+    
+    .triangle-right{
+        top: -20px;
+        left: -20px;
+        width: 0;
+        height: 0;
+        border-bottom:25px solid transparent;
+        border-left:25px solid var(--main-color) ;
+        opacity: 0;
+        transition: .3s;
+    }
+    .triangle-left{
+        right: -20px;
+        bottom: -20px;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-bottom:25px solid var(--main-color) ;
+        opacity: 0;
+        transition: .3s;
+    }
+   .glow-circla{
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(circle,var(--main-color),transparent 70%) ;
+    filter: blur(60px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   }
+}
+/*end what we do */
