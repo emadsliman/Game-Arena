@@ -350,3 +350,76 @@ background-color: var(--dark-gray);
    }
 }
 /*end what we do */
+/* our-team */
+#our-team{
+    background-color: var(--dark-color);
+    .inner-our-tem{
+        height: 350px;
+        --reveal:0%;
+
+        .gray-img,
+        .color-img {
+           position: absolute;
+           inset: 0;  
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        .gray-img{
+            filter: grayscale(100%);
+        }
+        .color-img{
+            clip-path: inset(calc(100% - var(--reveal)) 0 0 0);
+            transition:  .8s;
+        }
+        .layer {
+          position: absolute;
+          left: 0;
+          bottom: var(--reveal);
+           width: 100%;
+           height: 0px;
+           background-color: white;
+           transition: .8s;
+         }
+         &:hover{
+            --reveal:100%;
+            .our-tem-contant{
+                filter: grayscale(0%);
+            }
+         }
+   
+    }
+
+    .our-tem-contant{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        filter: grayscale(100%);
+        transition: .8s;
+          h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+        p.p1{
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--main-color);
+        }
+        p.p2{
+            font-size: 15px;
+            font-weight: 400;
+            color: gray;
+        }
+        .txt-rgt{
+            font-size: 15px;
+            color: var(--main-color);
+            transform: rotate(90deg);
+            transform-origin: center;
+            position: relative;
+            right: 10px;
+        }
+    }
+}
+/*end our-team */
