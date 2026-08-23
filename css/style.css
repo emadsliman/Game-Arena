@@ -472,3 +472,39 @@ background-color: var(--dark-gray);
 
 }
 /*end contact-us */
+/* footer */
+#footer{
+    background-color:black;
+    .hed-fotr{
+        color: var(--main-color);
+    }
+    .social-icn-fotr a{
+        transition: .2s;
+    }
+    .social-icn-fotr a:hover{
+        color: var(--main-color);
+    }
+    .contant-fotr li{
+        font-size: 16px;
+        transition: .2s;
+    }
+    .contant-fotr li:hover{
+        color: var(--main-color);
+    }
+     .line-footer{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin-top: 50px;
+  }
+  .in-ft-p-a{
+    font-size: 17px;
+  }
+  .in-ft-p-a a{
+    transition: .2s;
+  }
+  .in-ft-p-a a:hover{
+    color: var(--main-color);
+  }
+}
+/*end footer */
