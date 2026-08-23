@@ -18,25 +18,32 @@ a {
 
 /* genral end */
 body {
- font-family: "Chakra Petch", sans-serif;
- font-family: "Days One", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Days One", sans-serif;
 }
-h1,h2,h3,h4,h5{
- font-family: "Days One", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Days One", sans-serif;
 }
-a,p,label,button{
- font-family: "Chakra Petch", sans-serif;
+a,
+p,
+label,
+button {
+  font-family: "Chakra Petch", sans-serif;
 }
 :root {
   --dark-color: #0b0e13;
-  --main-color: #CBFE1C;
+  --main-color: #cbfe1c;
   --white-color: #f1f1f1;
 }
-.main-color{
-    color: var(--main-color);
+.main-color {
+  color: var(--main-color);
 }
-.main-bg-color{
-    background-color: var(--main-color);
+.main-bg-color {
+  background-color: var(--main-color);
 }
 
 /* navbar */
@@ -93,48 +100,169 @@ a,p,label,button{
 /* End navbar */
 
 /* hero section */
-#hero-section{
-    background-image: linear-gradient( to left, rgb(0, 0, 0, .8) ,rgb(0, 0, 0,.8)), url(../images/hero-bg.jpg);
-    min-height: 100vh;
+#hero-section {
+  background-image:
+    linear-gradient(to left, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),
+    url(../images/hero-bg.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  .h1-fs {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .btn1 {
+    color: var(--dark-color);
+    background-color: var(--main-color);
+    border: none;
+  }
+  .btn2 {
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: var(--main-color);
+      color: var(--dark-color);
+    }
+  }
+  .inner-img {
+    height: 400px;
+    overflow: hidden;
     background-position: center;
     background-size: cover;
-
-    .h1-fs{
-        font-size: 60px;
-        font-weight: 700;
-    }
-    .btn1 {
-        color: var(--dark-color);
-        background-color: var(--main-color);
-        border: none;
-    }
-    .btn2{
-        background: transparent;
-        color: var(--main-color);
-        border: 2px solid var(--main-color);
-        transition: .3s;
-
-        &:hover{
-            background-color: var(--main-color);
-            color: var(--dark-color);
-        }
-    }
-    .inner-img{
-        height: 400px;
-        overflow: hidden;
-        background-position: center;
-        background-size: cover;
-        object-fit: cover;
-        border: 5px solid var(--main-color);
-    }
-    .icon-club{
-        color: var(--main-color);
-    }
-    .active-players{
-        width: 200px;
-        height: 100px;
-        background-color: var(--dark-color);
-    }
+    object-fit: cover;
+    border: 5px solid var(--main-color);
+  }
+  .icon-club {
+    color: var(--main-color);
+  }
+  .active-players {
+    width: 200px;
+    height: 100px;
+    background-color: var(--dark-color);
+  }
 }
-
 /* End hero section */
+
+/* our game */
+#our-game {
+  background-color: var(--dark-color);
+  .our-a-b {
+    color: var(--main-color);
+  }
+  .our-a-b::before,
+  .our-a-b::after {
+    content: "";
+    height: 3px;
+    width: 80px;
+    background-color: var(--main-color);
+  }
+  .our-a-b::before {
+    background: linear-gradient(to right, transparent, var(--main-color));
+  }
+  .our-a-b::after {
+    background: linear-gradient(to left, transparent, var(--main-color));
+  }
+
+  .item {
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .absolute-s .iconn {
+    color: var(--main-color);
+    background-color: rgb(0, 0, 0,.7);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .item img {
+    transition: 0.5s;
+  }
+
+  .absolute-p {
+    font-size: 18px;
+    font-weight: 700;
+    color:var(--dark-color);
+  }
+  .absolute-s {
+    top: 20px;
+    left: 20px;
+    transform: translateY(-50px);
+    transition: 0.5s;
+  }
+  .absolute-p {
+    bottom: 20px;
+    left: 20px;
+    transform: translateY(60px);
+    transition: 0.5s;
+    z-index: 1;
+  }
+  .item:hover {
+    border: 3px solid #cbfe1c;
+  }
+  .item:hover .absolute-s {
+    transform: translateY(0);
+  }
+  .item:hover .absolute-p {
+    transform: translateY(0);
+  }
+  .item:hover img {
+    transform: scale(1.1);
+  }
+
+  .item1::after,
+  .item2::after,
+  .item3::after,
+  .item4::after,
+  .item5::after,
+  .item6::after,
+  .item7::after,
+  .item8::after,
+  .item9::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      to top,
+      rgb(203, 254, 28, 0.7),
+      transparent 60%
+    );
+    opacity: 0;
+  }
+  .item1:hover::after,
+  .item2:hover::after,
+  .item3:hover::after,
+  .item4:hover::after,
+  .item5:hover::after,
+  .item6:hover::after,
+  .item7:hover::after,
+  .item8:hover::after,
+  .item9:hover::after{
+    opacity: 1;
+  }
+
+  .icon-p,
+  .icon-n {
+    border: 3px solid gray;
+    transition: 0.3s;
+    &:hover {
+      border: 3px solid var(--main-color) !important;
+      color: var(--main-color) !important;
+    }
+  }
+  .our-btn {
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    transition: 0.3s;
+    &:hover {
+      background-color: var(--main-color);
+      color: var(--dark-color);
+    }
+  }
+}
+/* end our game */
